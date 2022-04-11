@@ -1,0 +1,16 @@
+name: "SpigotGuard"
+version: "6.4.3 BULLET-PROOF"
+authors: [ "yooniks", "NoJokeFNA" ]
+
+main: "xyz.yooniks.spigotguard.SpigotGuardPlugin"
+loadbefore: [ ViaVersion ]
+softdepend: [ ViaVersion, FastAsyncWorldEdit ]
+api-version: 1.13
+
+description: "Advanced protection against crashers and exploits for minecraft servers: https://mc-protection.eu/products/"
+website: "https://mc-protection.eu/products/"
+
+commands:
+  spigotguard:
+    aliases: [ "sg" ]
+    description: "The main command of SpigotGuard plugin"

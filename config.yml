@@ -1,0 +1,74 @@
+packet-limitter:
+  #To allow "schematic printer" on your server, you have to disable whole packet-limitter or just remove almost every packet-limitter sections
+  enabled: true
+  limits:
+    #Clicking in book, using it with ppm (opening) etc.. is limited to0 uses / s
+    BOOK_Use:
+      cancel-only: false
+      #Max 0 uses per second
+      limit: 9
+    #Editing/signing book is limited to3 uses / s
+    BOOK_Edit:
+      cancel-only: false
+      #Max 3 times per second
+      limit: 3
+    BOOK_Place:
+      cancel-only: false
+      limit: 10
+    PacketPlayInWindowClick_InvalidSlot:
+      cancel-only: false
+      limit: 3
+    PacketPlayInPositionLook_InvalidMovement:
+      cancel-only: false
+      limit: 3
+    #PacketPlayInPositionLook_SimilarPosition:
+    #  cancel-only: false
+    #  limit: 3
+    #Packet name
+    PacketPlayInWindowClick:
+      #Packet limit
+      limit: 170
+      #Cancel event only? If "true", then we don't kick a player when he reaches a limit
+      cancel-only: false
+    PacketPlayInUseEntity:
+      limit: 400
+      cancel-only: false
+    PacketPlayInEntityAction:
+      limit: 250
+      cancel-only: true
+    PacketPlayInUpdateSign:
+      limit: 6
+      cancel-only: false
+    PacketPlayInTabComplete:
+      limit: 45
+      cancel-only: false
+    PacketPlayInFlying:
+      limit: 350
+      cancel-only: true
+    PacketPlayInPositionLook:
+      limit: 180
+      cancel-only: false
+    PacketPlayInArmAnimation:
+      limit: 350
+      cancel-only: false
+    PacketPlayInBlockDig:
+      limit: 120
+      cancel-only: true
+    PacketPlayInBlockPlace:
+      limit: 110
+      cancel-only: false
+    PacketPlayInChat:
+      limit: 30
+      cancel-only: false
+    PacketPlayInSettings:
+      limit: 400
+      cancel-only: true
+    PacketPlayInAbilities:
+      limit: 50
+      cancel-only: false
+    PacketPlayInCustomPayload:
+      limit: 20
+      cancel-only: true
+    PacketPlayInVehicleMove_Invalid_v4:
+      limit: 5
+      cancel-only: false
